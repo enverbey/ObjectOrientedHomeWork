@@ -17,16 +17,16 @@ public class Proff
     }
 
     //
-    public void teaching(String teach_message, Student student)
+    public void teaches(String teach_message, Student student)
     {
-        student.learn(teach_message);
+        student.learns(teach_message);
         System.out.println("I teached something to " + student.getName());
     }
-    public void teaching(String teach_message, Student student, int notification_message_on_off)
+    public void teaches(String teach_message, Student student, int notification_message_on_off)
     {
         if (notification_message_on_off == 1)
             System.out.println("I teached something to " + student.getName());
-        student.learn(teach_message);
+        student.learns(teach_message);
 
     }
 }

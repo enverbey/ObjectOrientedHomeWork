@@ -20,12 +20,20 @@ public class Simple_main {
         harun.setSchool_number(22);
 
         //Prof. Ensar Gül is teaching.
-        Ensar_gul.teaching("I am the greatest professor and teacher in the world", enver, 0);
-        Ensar_gul.teaching("Java is a programming language released in 1995", harun, 0);
+        Ensar_gul.teaches("I am the greatest professor and teacher in the world", enver, 0);
+        Ensar_gul.teaches("Java is a programming language released in 1995", harun, 0);
 
         //Let's printf and
         System.out.println("I am a professor and my name is " + Ensar_gul.getName());
         System.out.println("Student " + enver.getName() + " learned : " + enver.getLearned_from_proff());
         System.out.println("Student " + harun.getName() + " learned : " + harun.getLearned_from_proff());
+
+        enver.learns("I am learning C programming language myself");
+        //Print a student's all information
+        enver.write_all_information();
+
+        //Delete enver's learning string.
+        enver.delete_learns();
+        enver.write_all_information();
     }
 }

@@ -18,13 +18,20 @@ public class
         this.name = name;
     }
     public void setSchool_number(int number){this.school_number = number; }
-    public void learn(String mess)
+    public void learns(String mess)
     {
-        this.learned_from_proff = mess;
+        if(this.learned_from_proff == null)
+            this.learned_from_proff = mess;
+        else
+            this.learned_from_proff = this.learned_from_proff + "\n" + mess;
+    }
+    public void delete_learns()
+    {
+        this.learned_from_proff = "";
     }
 
     //Get all information about this student.
-    public String get_all_information()
+    private String get_all_information()
     {
         String information = "My name is " + name + "\n" + "My school number is " + school_number
                 + "\n" + "I learned my these : " + "\"" + learned_from_proff + "\"";
